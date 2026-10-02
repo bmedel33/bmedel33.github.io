@@ -1,80 +1,222 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Portfolio | Rutgers University</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <title>Portfolio | Rutgers AI Specialist</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            rutgers: '#cc0033',
+            rutgersDark: '#990026'
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen">
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-rutgers selection:text-white">
+
   <!-- Navigation -->
-  <header class="sticky top-0 z-40 w-full border-b border-slate-800 bg-slate-900/80 backdrop-blur-md">
-    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-      <span class="font-bold text-lg">RU AI Portfolio</span>
-      <nav class="flex space-x-6 text-sm">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 text-lg font-bold tracking-wider">
+        <span class="text-rutgers font-black">&lt;/&gt;</span>
+        <span>AI PORTFOLIO</span>
+      </a>
+      <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+        <a href="#statement" class="hover:text-rutgers transition-colors">About</a>
+        <a href="#skills" class="hover:text-rutgers transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-rutgers transition-colors">Projects</a>
       </nav>
+      <a href="https://github.com/bmedel33" target="_blank" class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold py-2 px-4 rounded-full border border-slate-700 transition">
+        <i data-lucide="github" class="w-4 h-4"></i> GitHub Profile
+      </a>
     </div>
   </header>
 
-  <!-- Personal Statement -->
-  <section id="about" class="max-w-4xl mx-auto px-4 py-16">
-    <span class="text-rose-500 font-semibold text-xs tracking-wider">RUTGERS UNIVERSITY</span>
-    <h1 class="text-4xl font-extrabold mt-2 mb-4">AI & Effective AI Solutions</h1>
-    <p class="text-xl text-slate-300 border-l-4 border-rose-600 pl-4 py-1 font-medium">
-      I am a sophomore at Rutgers University interested in AI and effective AI skills.
-    </p>
-  </section>
+  <!-- Main Content Container -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
 
-  <!-- Skills Section -->
-  <section id="skills" class="max-w-4xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold mb-6">Skills</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="p-4 bg-slate-900 rounded-xl border border-slate-800">
-        <h3 class="font-bold text-rose-500">AI Brainstorming & Planning</h3>
-        <p class="text-sm text-slate-400 mt-1">System architecture and AI task breakdown.</p>
+    <!-- Section 1: Personal Statement -->
+    <section id="statement" class="pt-8">
+      <div class="bg-gradient-to-r from-slate-800 to-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-700/60 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-rutgers/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-rutgers/20 text-rutgers border border-rutgers/30 mb-6">
+          <span class="w-2 h-2 rounded-full bg-rutgers animate-ping"></span>
+          Rutgers University Student
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+          Personal Statement
+        </h1>
+        <p class="text-xl sm:text-2xl text-slate-200 font-medium leading-relaxed max-w-4xl border-l-4 border-rutgers pl-6 my-4">
+          I am a sophomore at Rutgers University interested in AI and effective AI skills.
+        </p>
+        <p class="text-slate-400 text-sm mt-6">
+          Passionate about leveraging artificial intelligence to automate workflows, optimize prompt design, and conduct deep research.
+        </p>
       </div>
-      <div class="p-4 bg-slate-900 rounded-xl border border-slate-800">
-        <h3 class="font-bold text-rose-500">Prompt Engineering</h3>
-        <p class="text-sm text-slate-400 mt-1">Chain-of-thought and optimized system prompts.</p>
+    </section>
+
+    <!-- Section 2: Skills -->
+    <section id="skills">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+            <i data-lucide="cpu" class="text-rutgers"></i> Core Skills
+          </h2>
+          <p class="text-slate-400 text-sm mt-1">Highlighted list of technical and professional AI competencies</p>
+        </div>
       </div>
-      <div class="p-4 bg-slate-900 rounded-xl border border-slate-800">
-        <h3 class="font-bold text-rose-500">Deep Research</h3>
-        <p class="text-sm text-slate-400 mt-1">Autonomous knowledge synthesis and domain discovery.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Skill 1 -->
+        <div class="bg-slate-800/60 border border-slate-700/70 hover:border-rutgers/50 p-6 rounded-2xl transition duration-300 hover:-translate-y-1 group">
+          <div class="w-12 h-12 bg-rutgers/10 text-rutgers rounded-xl flex items-center justify-center mb-4 group-hover:bg-rutgers group-hover:text-white transition-colors">
+            <i data-lucide="brain"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">AI Brainstorming & Planning</h3>
+          <p class="text-slate-400 text-sm">Structuring complex visual and strategic conceptualizations, feature mapping, and problem decomposition with LLMs.</p>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="bg-slate-800/60 border border-slate-700/70 hover:border-rutgers/50 p-6 rounded-2xl transition duration-300 hover:-translate-y-1 group">
+          <div class="w-12 h-12 bg-rutgers/10 text-rutgers rounded-xl flex items-center justify-center mb-4 group-hover:bg-rutgers group-hover:text-white transition-colors">
+            <i data-lucide="terminal"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Prompt Engineering</h3>
+          <p class="text-slate-400 text-sm">Designing high-accuracy system prompts, chain-of-thought instructions, and zero/few-shot reasoning templates.</p>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="bg-slate-800/60 border border-slate-700/70 hover:border-rutgers/50 p-6 rounded-2xl transition duration-300 hover:-translate-y-1 group">
+          <div class="w-12 h-12 bg-rutgers/10 text-rutgers rounded-xl flex items-center justify-center mb-4 group-hover:bg-rutgers group-hover:text-white transition-colors">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Deep Research</h3>
+          <p class="text-slate-400 text-sm">Synthesizing detailed insights, cross-referencing multi-source datasets, and compiling structured reports.</p>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="bg-slate-800/60 border border-slate-700/70 hover:border-rutgers/50 p-6 rounded-2xl transition duration-300 hover:-translate-y-1 group">
+          <div class="w-12 h-12 bg-rutgers/10 text-rutgers rounded-xl flex items-center justify-center mb-4 group-hover:bg-rutgers group-hover:text-white transition-colors">
+            <i data-lucide="globe"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Web Search</h3>
+          <p class="text-slate-400 text-sm">Leveraging structured queries and autonomous agentic web tools for real-time information retrieval.</p>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="bg-slate-800/60 border border-slate-700/70 hover:border-rutgers/50 p-6 rounded-2xl transition duration-300 hover:-translate-y-1 group md:col-span-2 lg:col-span-1">
+          <div class="w-12 h-12 bg-rutgers/10 text-rutgers rounded-xl flex items-center justify-center mb-4 group-hover:bg-rutgers group-hover:text-white transition-colors">
+            <i data-lucide="file-text"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Document Processing</h3>
+          <p class="text-slate-400 text-sm">Extracting key data points, summarizing long-form text, and parsing structured/unstructured documentation.</p>
+        </div>
+
       </div>
-      <div class="p-4 bg-slate-900 rounded-xl border border-slate-800">
-        <h3 class="font-bold text-rose-500">Web Search</h3>
-        <p class="text-sm text-slate-400 mt-1">Real-time web synthesis and verification.</p>
+    </section>
+
+    <!-- Section 3: Projects -->
+    <section id="projects">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+            <i data-lucide="folder-git-2" class="text-rutgers"></i> Featured Projects
+          </h2>
+          <p class="text-slate-400 text-sm mt-1">Showcase of AI-focused work and implementations</p>
+        </div>
       </div>
-      <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 md:col-span-2">
-        <h3 class="font-bold text-rose-500">Document Processing</h3>
-        <p class="text-sm text-slate-400 mt-1">Extracting structured insights from unstructured PDFs and texts.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Project 1 -->
+        <div class="bg-slate-800/40 border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-600 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-700 text-slate-300">Deep Research</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">AI Research Summarizer</h3>
+            <p class="text-slate-400 text-sm mb-4">
+              An automated deep research pipeline that pulls key findings, methodology, and datasets from lengthier academic papers and formats them into actionable executive summaries.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
+            <span class="text-xs text-slate-500">Python • Gemini API</span>
+            <a href="https://github.com/bmedel33" target="_blank" class="text-xs text-rutgers hover:underline font-semibold flex items-center gap-1">
+              View Code <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-slate-800/40 border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-600 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-700 text-slate-300">Prompt Engineering</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Prompt Optimization Tool</h3>
+            <p class="text-slate-400 text-sm mb-4">
+              A interactive web-based utility for testing, iterative refining, and evaluating prompt templates to reduce hallucination rates and increase structured JSON output accuracy.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
+            <span class="text-xs text-slate-500">JavaScript • Tailwind</span>
+            <a href="https://github.com/bmedel33" target="_blank" class="text-xs text-rutgers hover:underline font-semibold flex items-center gap-1">
+              View Code <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-slate-800/40 border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-600 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-700 text-slate-300">Document Processing</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">DocuExtract AI</h3>
+            <p class="text-slate-400 text-sm mb-4">
+              An intelligent document processing application that ingests unstructured PDFs and scans, extracting structured entities with precise multi-query search validation.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
+            <span class="text-xs text-slate-500">Python • Document AI</span>
+            <a href="https://github.com/bmedel33" target="_blank" class="text-xs text-rutgers hover:underline font-semibold flex items-center gap-1">
+              View Code <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p>© Rutgers University Student Portfolio. Built with Tailwind CSS.</p>
+      <div class="flex gap-4">
+        <a href="https://github.com/bmedel33" target="_blank" class="hover:text-slate-300">GitHub</a>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- Projects Section -->
-  <section id="projects" class="max-w-4xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold mb-6">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="p-5 bg-slate-900 rounded-xl border border-slate-800">
-        <h3 class="font-bold text-lg">AI Research Summarizer</h3>
-        <p class="text-sm text-slate-400 mt-2">Summarizes complex research papers into key takeaways.</p>
-      </div>
-      <div class="p-5 bg-slate-900 rounded-xl border border-slate-800">
-        <h3 class="font-bold text-lg">Prompt Optimization Pipeline</h3>
-        <p class="text-sm text-slate-400 mt-2">Automated prompt benchmark testing suite.</p>
-      </div>
-      <div class="p-5 bg-slate-900 rounded-xl border border-slate-800">
-        <h3 class="font-bold text-lg">Automated Document Extraction</h3>
-        <p class="text-sm text-slate-400 mt-2">Converts raw PDF invoices into clean JSON structure.</p>
-      </div>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
